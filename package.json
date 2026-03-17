@@ -1,0 +1,41 @@
+{
+  "name": "smart402",
+  "version": "0.1.0",
+  "description": "Deterministic risk engine for AI agent payments via x402",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["x402", "ai-agents", "payments", "risk", "stablecoin", "blockchain"],
+  "license": "Apache-2.0",
+  "author": "Roberto Moreno <rob@smart402.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Falinkaz/smart402-js"
+  },
+  "bugs": {
+    "url": "https://github.com/Falinkaz/smart402-js/issues"
+  },
+  "homepage": "https://github.com/Falinkaz/smart402-js"
+}
