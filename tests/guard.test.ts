@@ -140,7 +140,7 @@ describe("createSmart402Guard", () => {
   it("test_guard_rejects_non_usdc_token", async () => {
     const guard = createSmart402Guard(testConfig);
     await expect(guard.evaluate({ ...testPayment, token: "ETH" })).rejects.toThrow(
-      "smart402 v0.1 supports USDC only. Got: ETH",
+      "smart402 supports USDC only. Got: ETH",
     );
   });
 

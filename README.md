@@ -4,7 +4,7 @@ Deterministic policy engine for AI agent payments via [x402](https://x402.org).
 
 No LLM in the decision path. Every approve/deny traces to a rule your team configured — not a model's judgment call. A compromised agent cannot reason or prompt-inject its way past smart402.
 
-> **v0.1:** smart402 currently supports USDC transactions on Base (eip155:8453). Other tokens and chains are on the roadmap.
+> **v0.4.0:** Confirmed on-chain spend tracking. Budgets now reflect payments that actually landed on-chain.
 
 ## Install
 

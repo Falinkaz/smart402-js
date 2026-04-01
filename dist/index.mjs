@@ -80,7 +80,7 @@ var Smart402Unavailable = class extends Error {
 };
 
 // src/guard.ts
-var SDK_VERSION = "0.1.0";
+var SDK_VERSION = "0.4.0";
 var _USDC_DECIMALS = 6;
 function _rawUsdcToDecimal(rawAmount) {
   if (!/^\d+$/.test(rawAmount) || rawAmount === "0") {
@@ -108,7 +108,7 @@ function createSmart402Guard(config) {
      */
     async evaluate(paymentReqs, options) {
       if (paymentReqs.token.toUpperCase() !== "USDC") {
-        throw new Error(`smart402 v0.1 supports USDC only. Got: ${paymentReqs.token}`);
+        throw new Error(`smart402 supports USDC only. Got: ${paymentReqs.token}`);
       }
       const amountDecimal = _rawUsdcToDecimal(paymentReqs.amount);
       const evalRequest = {

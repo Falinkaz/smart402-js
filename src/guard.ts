@@ -2,7 +2,7 @@ import { Smart402Client } from "./client";
 import { Smart402Denied, Smart402Unavailable } from "./errors";
 import type { Smart402Config, EvaluateRequest, PaymentRequirements } from "./types";
 
-const SDK_VERSION = "0.1.0";
+const SDK_VERSION = "0.4.0";
 const _USDC_DECIMALS = 6;
 
 /**
@@ -62,7 +62,7 @@ export function createSmart402Guard(config: Smart402Config) {
       options?: { requestUrl?: string; throwOnDeny?: boolean },
     ) {
       if (paymentReqs.token.toUpperCase() !== "USDC") {
-        throw new Error(`smart402 v0.1 supports USDC only. Got: ${paymentReqs.token}`);
+        throw new Error(`smart402 supports USDC only. Got: ${paymentReqs.token}`);
       }
 
       const amountDecimal = _rawUsdcToDecimal(paymentReqs.amount);

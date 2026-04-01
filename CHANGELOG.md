@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0
+
+- `SDK_VERSION` bumped; no breaking changes
+
+## 0.2.0
+
+- `Smart402Config.agentWalletAddress`, `walletProvider`, `agentFramework` fields for richer evaluation context
+- CDP wallet support
+
 ## 0.1.0 — Initial release
 
 - `createSmart402Guard(config)` — evaluation function factory

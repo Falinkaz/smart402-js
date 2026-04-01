@@ -9,7 +9,7 @@
 export interface PaymentRequirements {
   /** Raw USDC token units as an integer string (e.g. "100000" for $0.10). The SDK converts this to a decimal dollar string before sending to the API; your policies are evaluated in dollars. */
   amount: string;
-  /** Token symbol. smart402 v0.1 supports USDC only — pass "USDC". */
+  /** Token symbol. smart402 supports USDC only — pass "USDC". */
   token: string;
   /** Payment scheme identifier (e.g. "exact"). */
   scheme?: string;
